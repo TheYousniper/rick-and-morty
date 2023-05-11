@@ -1,0 +1,207 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  
+    /*========== Colors ==========*/
+    /*Color mode HSL(hue, saturation, lightness)*/
+    --first-color: #0F7F6C90;
+    --text-color: rgb(64, 255, 58);
+  
+    /*========== Font and typography ==========*/
+    /*.5rem = 8px | 1rem = 16px ...*/
+    --body-font: 'Space Grotesk', sans-serif;
+    --biggest-font-size: 2.375rem;
+    --normal-font-size: .938rem;
+    --smaller-font-size: .75rem;
+  }
+  /* Responsive typography */
+@media screen and (min-width: 1024px) {
+    :root {
+      --biggest-font-size: 5rem;
+      --normal-font-size: 1rem;
+      --smaller-font-size: .813rem;
+    }
+  }
+  /*=============== BASE ===============*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  body {
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    font-weight: 500;
+    color: var(--text-color);
+  }
+  a {
+    text-decoration: none;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  /*=============== REUSABLE CSS CLASSES ===============*/
+.containerGosth {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+  .ghost {
+    overflow: hidden; /* For the animations ScrollReveal */
+  }
+
+  /*=============== HOME ===============*/
+.home {
+    background-color: var(--first-color);
+    display: grid;
+    padding: 5rem;
+    width: 70%;
+    margin: 0 auto;
+    border-radius: 50px;
+    margin-top: 30px;
+    backdrop-filter: blur(5px);
+  }
+  
+  .home__container {
+    display: grid;
+    align-content: center;
+    row-gap: 2.5rem;
+  }
+  
+  .home__data {
+    text-align: center;
+  }
+  
+  .home__title {
+    font-size: var(--biggest-font-size);
+    margin: .75rem 0;
+  }
+  .home__subtitle{
+    font-size: 4rem;
+  }
+  .home__description{
+    font-size: 1.5rem;
+    text-align: right;
+    padding: 20px 0;
+  }
+  
+  .home__button {
+    margin-top: 2rem;
+    display: inline-block;
+    background-color: var(--text-color);
+    color: rgb(15, 115, 197);
+    padding: .80rem 1.5rem;
+    border-radius: 3rem;
+    transition: .25s;
+    font-size: 1.5rem;
+    border: 0px; 
+    box-shadow: 5px 5px 15px 0px rgb(15, 115, 197);
+  }
+  
+  .home__button:active:hover {
+    background-color: rgb(15, 115, 197);
+    color: var(--text-color);
+    box-shadow: 5px 5px 15px 0px var(--text-color);
+  }
+  
+  .home__img img {
+    width: 230px;
+    animation: floaty 1.8s infinite alternate;
+  }
+  
+  .home__img {
+
+    width: 100%;
+    justify-self: center;
+  }
+  
+  .home__shadow {
+    background-color: hsla(38, 21%, 19%, .16);
+    margin-left: 50px;
+    border-radius: 50%;
+    filter: blur(7px);
+    animation: shadow 1.8s infinite alternate;
+    margin-top: 50px;
+  }
+  
+  .home__footer {
+    display: flex;
+    justify-content: center;
+    column-gap: .5rem;
+    font-size: var(--smaller-font-size);
+    align-self: flex-end;
+  }
+  /* Animate ghost */
+@keyframes floaty {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(15px);
+    }
+  }
+  
+  @keyframes shadow {
+    0% {
+      transform: scale(1, 1);
+    }
+    100% {
+      transform: scale(.85, .85);
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .home__container {
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+      column-gap: 2rem;
+    }
+    .home__data {
+      text-align: initial;
+    }
+    .home__img img {
+      width: 400px;
+    }
+    .home__shadow {
+      width: 250px;
+      height: 40px;
+    }
+  }
+  
+  @media screen and (min-width: 1048px) {
+    .container {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  
+  @media (max-width:450px){
+    .home__title{
+      font-size: 2rem;
+    }
+    .home__subtitle{
+      font-size: 2rem;
+    }
+    .home__description{
+      display: none;
+    }
+    .home__button{
+      font-size: 1rem;
+    }
+    .home__container{
+     
+      display: flex;
+      flex-direction: row;
+      
+    }
+    .home__data{
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .home__img{
+      display: none;
+    }
+  }

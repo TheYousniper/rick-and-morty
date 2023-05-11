@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+
+*{
+  font-family: 'Acme', sans-serif;
+}
+
+html, body{
+  background-color: transparent;
+}
+/* @font-face{
+  font-family: 'schwifty';
+  src: url('./assets/fonts/rickAndMorty/schwifty.ttf');
+}
+
+*{
+  font-family: 'schwifty';
+} */
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

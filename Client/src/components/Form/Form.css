@@ -1,0 +1,108 @@
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 480px;
+    height: 700px;
+    margin: 0 auto;
+    background-color: #00000090;
+    margin-top: 50px;
+    border-radius: 25px;
+    backdrop-filter: blur(5px);
+}
+.containerForm{
+    width: 400px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.formData{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.labelForm{
+    font-size: 2rem;
+    text-shadow: 4px 4px 4px rgb(15, 115, 197);
+}
+.inputForm{
+    width: 300px;
+    height: 30px;
+    font-size: 1.5rem;
+    margin: 10px 0;
+    font-family: 'Acme', sans-serif;
+    border: 0;
+    outline: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+.inputForm::placeholder{
+    font-size: 1.2rem;
+    font-family: 'Acme', sans-serif;
+}
+.btnSubmit{
+    border: 0px;
+    border-radius: 20px;
+    background-color: rgb(15, 115, 197) ;
+    color: rgb(64, 255, 58);
+    font-size: 2rem;
+    margin-top: 20px;
+    transition: 0.25s ease;
+    padding: 5px;
+    box-shadow: 5px 5px 15px 0px rgb(64, 255, 58);
+    cursor: pointer;
+}
+.btnSubmit:hover{
+    transform: scale(0.9);
+    background-color: rgb(64, 255, 58);
+    color: rgb(17, 194, 194);
+    box-shadow: 5px 5px 15px 0px rgb(15, 115, 197);
+}
+
+
+.warning {
+    border: solid red 1px;
+    border-radius: 0.2em;
+  }
+  
+  .danger {
+    width: 100%;
+    font-size: 12px;
+    color: red;
+    text-align: right;
+  }
+
+  @media (max-width:450px){
+    .content{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        border-radius: 0;
+    }
+    .containerForm{
+        width: 100%;
+        height: 100%;
+        padding: 0;
+    }
+    .formImg{
+        width: 70%;
+    }
+    .inputForm{
+        width: 100%;
+    }
+    .btnSubmit{
+        width: 80%;
+    }
+  }
+  
